@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        var n1 = window.prompt ('Digite um número')// Valor padrão de prompt == string
+        var n2 = window.prompt ('Digite outro número')// Valor padrão de prompt == string
+        var s = n1 + n2
+        window.alert ('Sem a coverção de data type o "+" concatena n1 e n2, ou seja: ' + s)
+        // (number + number) para adição
+        // (string + string) para concatenação
+        /* 
+        String > Number
+            Number.parseInt(n)  - Para números do conjunto dos inteiros
+            Number.partFloat    - Para números do conjunto dos reais
+            Number(n)           - O próprio JS identifica se é um númro contido nos reais ou nos inteiros
+        
+        Number > String
+            String(n)
+            n.toString()
+        */
+        var n1 = Number.parseInt(window.prompt ('Digite um número'))// Valor convertido de prompt == string
+        var n2 = Number.parseInt(window.prompt ('Digite outro número'))// Valor padão de prompt == string
+        var s = n1 + n2
+       window.alert('Agora o "+" está realizando uma função de adição sendo n1 + n2 = ' + s)
+    </script>
+</body>
+</html>
