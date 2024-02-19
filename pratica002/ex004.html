@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Document</title>
+    <style>
+        body {
+            font: normalv 20pt Arial;
+        }
+    </style>
 </head>
 <body>
     
     <script>
-        
+        var numero = 1234.5
+        var nome = window.prompt('Qual o seu nome?');
+        document.write(`<p>Olá <strong>${nome}</strong>. Seu nome tem ${nome.length} letras</p>`)
+        //Templates string só funcionam com acentos graves ao lado da tecla P Shift + ´
+        document.write(`<p>Seu nome em maiúsculas é ${nome.toUpperCase()}<br></p>`)
+        document.write(`<p>Seu nome em minúsculas é ${nome.toLowerCase()}<br></p>`)
+        document.write
+            (`
+                <p>Este é o número que vamos formatar ${numero}</p>
+                <p>Aumentar o número das casas decimais ${numero.toFixed(2)}</p>
+                <p>Mudar os coisas de lugar, como acentos numéricos ${numero.toFixed(2).replace('.',',')}</p>
+                <p>Transformar modo de leitura nativo ${numero.toLocaleString('pt-BR')}</p>
+                <p>Trasformar número em valor financeiro ${numero.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</p>
+                <p></p>
+
+            `)
     </script>
 </body>
 </html>
